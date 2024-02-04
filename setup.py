@@ -18,6 +18,7 @@ setup(name='mcrpy',
           'matplotlib>=3.3.4',
           'scipy>=1.6.2',
           'pyevtk',
+          'pyYAML',
       ],
       extras_require={
           'animations': ['imageio-ffmpeg>=0.4.5'],
