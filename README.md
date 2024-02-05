@@ -51,6 +51,17 @@ This will also download the example images and microstructures.
 `git clone https://github.com/NEFM-TUDresden/MCRpy.git ; pip install -e . `
 
 ### For HPC
+
+```bash
+module load release/23.04  GCC/11.3.0  OpenMPI/4.1.4 TensorFlow/2.11.0-CUDA-11.7.0
+```
+install virtual enviroment in the repository
+
+```bash
+python -m venv --system-site-packages .venv_mcrpy
+```
+
+
 On HPC clusters, it can be challenging to pip-install a Python package and at the same time keep access to pre-compiled modules like tensorflow. If the tensorflow installation has not been compiled for the correct hardware, the MCRpy performance can be quite underwhelming. A simple solution is to 
 1. copy the MCRpy source code into the desired workspace
 2. load the modules that satisfy the dependencies
