@@ -10,6 +10,15 @@ __pycache__/
 .venv/
 .venv_mcrpy/
 
+# user 
+
+data/
+
+
+# mac hidden files
+.DS_Store
+
+
 # Distribution / packaging
 .Python
 build/
