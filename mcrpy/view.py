@@ -51,7 +51,7 @@ def view_generic_pickle(data: Dict, save_as: str = None, original_ms: Microstruc
             loader.load_plugins([f'mcrpy.descriptors.{k}' ])
             visualize = descriptor_factory.get_visualization(k)
             visualize(v, descriptor_type=k, 
-                    save_as=f'{save_as[:-4]}_{k}.png' if save_as is not None else None)
+                    save_as=f'{save_as[:-4]}_{k}.pdf' if save_as is not None else None)
             # except Exception as e:
             #     logging.error(f'Error plotting {k}')
         logging.info('done visualizations')
