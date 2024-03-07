@@ -180,11 +180,11 @@ class Descriptor(ABC):
             descriptor_type: str = None):
         if isinstance(descriptor_value, (tuple, list)):
             if save_as is not None:
-                assert save_as.endswith('.png')
+                assert save_as.endswith('.pdf')
             for dim_number, dim_value in enumerate(descriptor_value):
                 cls.visualize_slice(
                         dim_value,
-                        save_as=f'{save_as[:-4]}_dimension_{dim_number+1}.png' if save_as is not None else None,
+                        save_as=f'{save_as[:-4]}_dimension_{dim_number+1}.pdf' if save_as is not None else None,
                         descriptor_type=descriptor_type)
         else:
             cls.visualize_slice(descriptor_value, save_as=save_as, descriptor_type=descriptor_type)
